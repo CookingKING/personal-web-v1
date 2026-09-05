@@ -1,28 +1,35 @@
 import type { Metadata } from 'next';
-import { Playfair_Display, Source_Sans_3 } from 'next/font/google';
 import './globals.css';
 
-const playfair = Playfair_Display({ variable: '--font-playfair', subsets: ['latin'], style: ['normal', 'italic'] });
-const source = Source_Sans_3({ variable: '--font-source', subsets: ['latin'] });
+const siteUrl = 'https://zhang-organic-portfolio.zhangruochen40.chatgpt.site';
 
 export const metadata: Metadata = {
-  title: 'Zhang — 独立设计师与创意开发者',
-  description: '用策略、设计与代码，创造有温度的数字体验。',
-  metadataBase: new URL('https://zhang-organic-portfolio.zhangruochen40.chatgpt.site'),
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: 'Zhang — 个人作品集',
+    template: '%s | Zhang',
+  },
+  description: '认识 Zhang：精选项目、视频作品、专业能力与职业经历。',
+  keywords: ['Zhang', '个人作品集', '作品案例', '视频作品', '求职'],
+  authors: [{ name: 'Zhang' }],
+  robots: { index: true, follow: true },
   openGraph: {
-    title: 'Zhang — 独立设计师与创意开发者',
-    description: '用策略、设计与代码，创造有温度的数字体验。',
+    title: 'Zhang — 个人作品集',
+    description: '作品、视频与经历，一页认识 Zhang。',
+    url: siteUrl,
+    siteName: 'Zhang — 个人作品集',
     type: 'website',
-    images: [{ url: '/og.png', width: 1731, height: 909, alt: '设计有温度的数字体验' }],
+    locale: 'zh_CN',
+    images: [{ url: '/og.png', width: 1672, height: 941, alt: 'Zhang — 个人作品集；作品、视频、经历' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zhang — 独立设计师与创意开发者',
-    description: '用策略、设计与代码，创造有温度的数字体验。',
+    title: 'Zhang — 个人作品集',
+    description: '作品、视频与经历，一页认识 Zhang。',
     images: ['/og.png'],
   },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="zh-CN"><body className={`${playfair.variable} ${source.variable}`}>{children}</body></html>;
+  return <html lang="zh-CN"><body>{children}</body></html>;
 }

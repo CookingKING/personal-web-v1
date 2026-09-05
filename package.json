@@ -1,10 +1,8 @@
 {
-  "name": "sites-project",
+  "name": "zhang-personal-site",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": ">=22.13.0"
-  },
+  "engines": { "node": ">=22.13.0" },
   "scripts": {
     "dev": "vinext dev",
     "build": "vinext build",
@@ -19,7 +17,7 @@
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.37.1",
     "@cloudflare/workers-types": "4.20260515.1",
-    "@openai/sites-vite-plugin": "^0.1.0 || ^0.2.0",
+    "@openai/sites-vite-plugin": "^0.2.0",
     "@tailwindcss/postcss": "4.2.1",
     "@types/node": "22.19.19",
     "@types/react": "19.2.14",
