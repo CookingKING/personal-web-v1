@@ -15,20 +15,20 @@ export const siteUrl = rawSiteUrl && /^https?:\/\//.test(rawSiteUrl)
 
 const pageDescriptions: Record<Locale, Record<PageKey, string>> = {
   en: {
-    home: "The personal site of Ruochen. Selected videos, ideas, and thoughtful work in one place.",
+    home: "The personal site of Ruochen Zhang, a Sydney-based technology and data generalist with experience across software, marketing, and real-world operations.",
     work: "Selected video work from Ruochen, including future releases from YouTube, Bilibili, and Douyin.",
-    about: "About Ruochen and the ideas behind this growing personal archive.",
+    about: "About Ruochen Zhang: education in information technology, mathematics, and statistics, with experience across software projects, marketing, and NSW SES volunteering.",
   },
   zh: {
-    home: "Ruochen 的个人网站，集中展示精选视频、想法与持续发生的创作。",
+    home: "张若宸的个人网站：现居悉尼，拥有信息技术、数学与统计学背景，并具备软件项目、市场营销和实际运营经验。",
     work: "Ruochen 的精选视频作品，未来将收录 YouTube、Bilibili 与抖音内容。",
-    about: "了解 Ruochen，以及这个持续生长的个人档案背后的想法。",
+    about: "了解张若宸的教育、技能与实践经历，包括软件项目、品牌营销、零售运营和 NSW SES 志愿服务。",
   },
 };
 
 const pageTitles: Record<Locale, Record<PageKey, string>> = {
-  en: { home: "Ruochen — Personal site", work: "Selected work — Ruochen", about: "About — Ruochen" },
-  zh: { home: "Ruochen — 个人网站", work: "精选作品 — Ruochen", about: "关于 — Ruochen" },
+  en: { home: "Ruochen Zhang — Technology & Data", work: "Selected work — Ruochen", about: "About Ruochen Zhang" },
+  zh: { home: "张若宸 — 技术与数据", work: "精选作品 — Ruochen", about: "关于张若宸" },
 };
 
 export function pageMetadata(locale: Locale, page: PageKey): Metadata {
@@ -43,7 +43,7 @@ export function pageMetadata(locale: Locale, page: PageKey): Metadata {
   return {
     title,
     description,
-    authors: [{ name: siteContent.name }],
+    authors: [{ name: localizedName(locale) }],
     robots: { index: true, follow: true },
     alternates: siteUrl
       ? {
@@ -74,4 +74,8 @@ export function pageMetadata(locale: Locale, page: PageKey): Metadata {
       images: imageUrl ? [imageUrl] : undefined,
     },
   };
+}
+
+function localizedName(locale: Locale) {
+  return siteContent.fullName[locale];
 }

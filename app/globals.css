@@ -381,17 +381,32 @@ html[lang="zh-CN"] .page-intro h1 {
   gap: 9vw;
 }
 
-.about-grid:has(.portrait) { grid-template-columns: minmax(260px, 1fr) minmax(0, 1.3fr) minmax(240px, .8fr); }
-.portrait { margin: 0; }
+.about-grid:has(.portrait) { grid-template-columns: minmax(180px, 220px) minmax(0, 1.5fr) minmax(220px, .75fr); gap: clamp(3rem, 6vw, 7rem); }
+.portrait { width: 193px; max-width: 100%; margin: 0; align-self: start; }
 .portrait img { width: 100%; height: auto; }
+
+.profile-name {
+  margin: 1.25rem 0 .35rem;
+  font-size: clamp(1.7rem, 2.7vw, 3rem);
+  letter-spacing: -.045em;
+}
+
+.profile-location {
+  margin: 0;
+  color: var(--accent);
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
 
 .about-lede {
   max-width: 760px;
   margin: 1.5rem 0 2.4rem;
   font-family: Georgia, "Times New Roman", "Noto Serif SC", serif;
-  font-size: clamp(2rem, 4.2vw, 4.5rem);
-  letter-spacing: -.05em;
-  line-height: 1.08;
+  font-size: clamp(1.65rem, 2.8vw, 3rem);
+  letter-spacing: -.04em;
+  line-height: 1.16;
 }
 
 .about-story > p:last-child {
@@ -405,6 +420,82 @@ html[lang="zh-CN"] .page-intro h1 {
 .values ol { margin: 1.3rem 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
 .values li { padding: 1.2rem 0; display: grid; grid-template-columns: 2.5rem 1fr; gap: .7rem; border-bottom: 1px solid var(--line); font-size: .98rem; }
 .values li span { color: var(--accent); font-size: .66rem; font-weight: 800; }
+
+.resume-sections { border-top: 1px solid var(--line); }
+
+.resume-section {
+  padding: clamp(4rem, 7vw, 7rem) 4vw;
+  display: grid;
+  grid-template-columns: minmax(180px, .65fr) minmax(0, 2fr);
+  gap: clamp(3rem, 8vw, 9rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.resume-section-heading h2 {
+  margin: 1.1rem 0 0;
+  font-size: clamp(2rem, 3.6vw, 4rem);
+  font-weight: 600;
+  letter-spacing: -.055em;
+}
+
+.resume-list { margin: 0; padding: 0; list-style: none; }
+
+.resume-entry {
+  padding: 1.7rem 0;
+  display: grid;
+  grid-template-columns: minmax(95px, 135px) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  border-top: 1px solid var(--line);
+}
+
+.resume-entry:last-child { border-bottom: 1px solid var(--line); }
+
+.resume-entry time,
+.resume-organization {
+  color: var(--muted);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .09em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.resume-organization { margin: 0 0 .55rem; color: var(--accent); }
+
+.resume-entry h3 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2vw, 2.1rem);
+  letter-spacing: -.035em;
+}
+
+.resume-entry div > p:last-child {
+  max-width: 760px;
+  margin: .85rem 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.toolkit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+.toolkit-grid h3 {
+  margin: 0 0 1.25rem;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.tag-list,
+.plain-list { margin: 0; padding: 0; list-style: none; }
+
+.tag-list { display: flex; flex-wrap: wrap; gap: .6rem; }
+.tag-list li { padding: .7rem .8rem; border: 1px solid var(--line); font-size: .78rem; font-weight: 700; }
+.plain-list { border-top: 1px solid var(--line); }
+.plain-list li { padding: .8rem 0; border-bottom: 1px solid var(--line); color: var(--muted); line-height: 1.45; }
+.interests-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 1.2rem; }
 
 .contact-panel {
   min-height: 55vh;
@@ -480,7 +571,10 @@ html[lang="zh-CN"] .page-intro h1 {
   .empty-symbol { max-height: 45vh; }
   .video-grid { padding: 3rem 1.25rem; grid-template-columns: 1fr; gap: 3.5rem; }
   .about-grid, .about-grid:has(.portrait) { padding: 4rem 1.25rem; grid-template-columns: 1fr; gap: 4rem; }
-  .portrait { max-width: 520px; }
+  .portrait { width: 193px; max-width: 55vw; }
+  .resume-section { padding: 4rem 1.25rem; grid-template-columns: 1fr; gap: 2.5rem; }
+  .resume-entry { grid-template-columns: 1fr; gap: .7rem; }
+  .toolkit-grid { grid-template-columns: 1fr; gap: 3rem; }
   .contact-panel { min-height: 50vh; padding: 4rem 1.25rem; }
   .site-footer { padding: 4rem 1.25rem 1.5rem; }
   .footer-lead { min-height: 34vh; grid-template-columns: 1fr; align-content: start; }
