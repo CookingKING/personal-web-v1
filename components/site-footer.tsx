@@ -2,17 +2,17 @@ import type { Locale } from "@/content/site";
 import { copy, siteContent } from "@/content/site";
 import { route } from "@/lib/routes";
 
-export function SiteFooter({ locale }: { locale: Locale }) {
+export function SiteFooter({ locale, compact = false }: { locale: Locale; compact?: boolean }) {
   const c = copy(locale);
   const hasLinks = Boolean(siteContent.email || siteContent.socialLinks.length);
 
   return (
-    <footer className="site-footer">
-      <div className="footer-lead">
+    <footer className={compact ? "site-footer compact-footer" : "site-footer"}>
+      {!compact && <div className="footer-lead">
         <p className="eyebrow">{c.followWork}</p>
         <h2>{hasLinks ? c.connect : c.followPrompt}</h2>
-      </div>
-      {hasLinks && (
+      </div>}
+      {!compact && hasLinks && (
         <div className="footer-links" aria-label={c.connect}>
           {siteContent.email && <a href={`mailto:${siteContent.email}`}>Email <span aria-hidden="true">↗</span></a>}
           {siteContent.socialLinks.map((link) => (

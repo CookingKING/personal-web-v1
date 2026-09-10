@@ -15,20 +15,20 @@ export const siteUrl = rawSiteUrl && /^https?:\/\//.test(rawSiteUrl)
 
 const pageDescriptions: Record<Locale, Record<PageKey, string>> = {
   en: {
-    home: "The personal site of Ruochen Zhang, a Sydney-based technology and data generalist with experience across software, marketing, and real-world operations.",
+    home: "Ruochen Zhang’s personal archive and contact information.",
     work: "Selected video work from Ruochen, including future releases from YouTube, Bilibili, and Douyin.",
-    about: "About Ruochen Zhang: education in information technology, mathematics, and statistics, with experience across software projects, marketing, and NSW SES volunteering.",
+    about: "Meet Ruochen Zhang: profile, education in information technology, mathematics and statistics, tools, certifications, and outdoor interests.",
   },
   zh: {
-    home: "张若宸的个人网站：现居悉尼，拥有信息技术、数学与统计学背景，并具备软件项目、市场营销和实际运营经验。",
+    home: "张若宸的个人档案与联系方式。",
     work: "Ruochen 的精选视频作品，未来将收录 YouTube、Bilibili 与抖音内容。",
-    about: "了解张若宸的教育、技能与实践经历，包括软件项目、品牌营销、零售运营和 NSW SES 志愿服务。",
+    about: "了解张若宸的个人简介、信息技术与数学统计学教育背景、技能工具、证书和户外兴趣。",
   },
 };
 
 const pageTitles: Record<Locale, Record<PageKey, string>> = {
-  en: { home: "Ruochen Zhang — Technology & Data", work: "Selected work — Ruochen", about: "About Ruochen Zhang" },
-  zh: { home: "张若宸 — 技术与数据", work: "精选作品 — Ruochen", about: "关于张若宸" },
+  en: { home: "Personal archive — Ruochen Zhang", work: "Selected work — Ruochen", about: "About Ruochen Zhang" },
+  zh: { home: "个人档案 — 张若宸", work: "精选作品 — Ruochen", about: "关于张若宸" },
 };
 
 export function pageMetadata(locale: Locale, page: PageKey): Metadata {

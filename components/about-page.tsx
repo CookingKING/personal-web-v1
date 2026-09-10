@@ -51,7 +51,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
           <h1 id="about-title">{c.aboutTitleOne}<br /><em>{c.aboutTitleTwo}</em></h1>
           <p>{c.aboutIntro}</p>
         </section>
-        <section className="about-grid">
+        <section className="about-grid" aria-labelledby="profile-title">
           {siteContent.portrait && (
             <figure className="portrait">
               <Image
@@ -66,23 +66,17 @@ export function AboutPage({ locale }: { locale: Locale }) {
           )}
           <div className="about-story">
             <p className="eyebrow">{c.currentNoteTitle}</p>
-            <h2 className="profile-name">{localized(siteContent.fullName, locale)}</h2>
+            <h2 id="profile-title" className="profile-name">{localized(siteContent.fullName, locale)}</h2>
             <p className="profile-location">{c.basedIn} · {localized(siteContent.location, locale)}</p>
             <p className="about-lede">{localized(siteContent.bio, locale)}</p>
             <p>{c.currentNote}</p>
           </div>
-          <div className="values">
-            <p className="eyebrow">{c.valuesTitle}</p>
-            <ol>{c.values.map((value, index) => <li key={value}><span>0{index + 1}</span>{value}</li>)}</ol>
-          </div>
         </section>
         <div className="resume-sections">
           <ProfileSection entries={siteContent.education} id="education-title" locale={locale} marker="02" title={c.educationTitle} />
-          <ProfileSection entries={siteContent.experience} id="experience-title" locale={locale} marker="03" title={c.experienceTitle} />
-          <ProfileSection entries={siteContent.projects} id="projects-title" locale={locale} marker="04" title={c.projectsTitle} />
           <section className="resume-section toolkit-section" aria-labelledby="toolkit-title">
             <div className="resume-section-heading">
-              <p className="eyebrow">R / 05</p>
+              <p className="eyebrow">R / 03</p>
               <h2 id="toolkit-title">{c.toolkitTitle}</h2>
             </div>
             <div className="toolkit-grid">
@@ -101,18 +95,8 @@ export function AboutPage({ locale }: { locale: Locale }) {
             </div>
           </section>
         </div>
-        <section className="contact-panel" aria-labelledby="connect-title">
-          <p className="eyebrow">{c.connect}</p>
-          <h2 id="connect-title">{siteContent.email || siteContent.socialLinks.length ? c.connectPrompt : c.connectPending}</h2>
-          {(siteContent.email || siteContent.socialLinks.length > 0) && (
-            <div className="contact-links">
-              {siteContent.email && <a href={`mailto:${siteContent.email}`}>{siteContent.email} <span aria-hidden="true">↗</span></a>}
-              {siteContent.socialLinks.map((link) => <a href={link.url} key={link.url} target="_blank" rel="noopener noreferrer">{link.label} <span aria-hidden="true">↗</span></a>)}
-            </div>
-          )}
-        </section>
       </main>
-      <SiteFooter locale={locale} />
+      <SiteFooter locale={locale} compact />
     </>
   );
 }

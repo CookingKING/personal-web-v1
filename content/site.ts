@@ -130,6 +130,7 @@ export const siteContent = {
 
 export const ui = {
   en: {
+    archiveTitle: "Personal archive",
     languageName: "中文",
     navigationLabel: "Primary navigation",
     home: "Home",
@@ -154,7 +155,7 @@ export const ui = {
     aboutEyebrow: "02 / About",
     aboutTitleOne: "Technology, data,",
     aboutTitleTwo: "and work made real.",
-    aboutIntro: "A concise view of Ruochen’s education, experience, and practical interests.",
+    aboutIntro: "A concise view of Ruochen’s profile, education, tools, and interests.",
     currentNoteTitle: "Profile",
     currentNote: "From quantitative study and software projects to brand campaigns and emergency-service volunteering, Ruochen brings analytical thinking into practical, collaborative environments.",
     valuesTitle: "Working principles",
@@ -176,6 +177,7 @@ export const ui = {
     copyright: "Personal site",
   },
   zh: {
+    archiveTitle: "个人档案",
     languageName: "English",
     navigationLabel: "主要导航",
     home: "首页",
@@ -200,7 +202,7 @@ export const ui = {
     aboutEyebrow: "02 / 关于",
     aboutTitleOne: "技术、数据，",
     aboutTitleTwo: "以及落地的行动。",
-    aboutIntro: "简要了解张若宸的教育背景、实践经历与个人兴趣。",
+    aboutIntro: "简要了解张若宸的个人简介、教育背景、技能与兴趣。",
     currentNoteTitle: "个人简介",
     currentNote: "从量化学习与软件项目，到品牌营销和应急服务志愿经历，张若宸习惯把分析思维带入真实、协作的工作环境。",
     valuesTitle: "做事方式",
