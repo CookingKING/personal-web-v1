@@ -48,7 +48,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
       <main id="main-content">
         <section className="page-intro about-intro" aria-labelledby="about-title">
           <p className="eyebrow">{c.aboutEyebrow}</p>
-          <h1 id="about-title">{c.aboutTitleOne}<br /><em>{c.aboutTitleTwo}</em></h1>
+          <h1 id="about-title" lang="en"><em>{c.aboutTitle}</em></h1>
           <p>{c.aboutIntro}</p>
         </section>
         <section className="about-grid" aria-labelledby="profile-title">

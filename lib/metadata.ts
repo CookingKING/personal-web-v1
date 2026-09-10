@@ -27,8 +27,8 @@ const pageDescriptions: Record<Locale, Record<PageKey, string>> = {
 };
 
 const pageTitles: Record<Locale, Record<PageKey, string>> = {
-  en: { home: "Personal archive — Ruochen Zhang", work: "Selected work — Ruochen", about: "About Ruochen Zhang" },
-  zh: { home: "个人档案 — 张若宸", work: "精选作品 — Ruochen", about: "关于张若宸" },
+  en: { home: "Ruochen Zhang", work: "Selected work — Ruochen", about: "About Ruochen Zhang" },
+  zh: { home: "张若宸", work: "精选作品 — Ruochen", about: "关于张若宸" },
 };
 
 export function pageMetadata(locale: Locale, page: PageKey): Metadata {

@@ -38,8 +38,8 @@ export const siteContent = {
     zh: "把技术、数据与真实场景中的执行经验，清晰而认真地连接起来。",
   },
   bio: {
-    en: "Ruochen Zhang is a Sydney-based technology and data generalist with an Information Technology master’s degree from UNSW and a background in mathematics and statistics from Purdue University.",
-    zh: "张若宸现居悉尼，是一名兼具技术、数据与实际运营经验的复合型人才，拥有新南威尔士大学信息技术硕士学位，以及普渡大学数学与统计学背景。",
+    en: "I do math, selling, rock climbing and content creating.",
+    zh: "我做数学、销售、攀岩，也做内容创作。",
   },
   portrait: {
     src: "/ruochen-portrait.jpg",
@@ -55,7 +55,7 @@ export const siteContent = {
   videos: [] as Video[],
   education: [
     {
-      period: { en: "2024 - 2025", zh: "2024 - 2025" },
+      period: { en: "2024 - 2026", zh: "2024 - 2026" },
       title: { en: "Master of Information Technology", zh: "信息技术硕士" },
       organization: { en: "UNSW Sydney", zh: "新南威尔士大学" },
       summary: {
@@ -130,7 +130,7 @@ export const siteContent = {
 
 export const ui = {
   en: {
-    archiveTitle: "Personal archive",
+    archiveTitle: "Ruochen Zhang",
     languageName: "中文",
     navigationLabel: "Primary navigation",
     home: "Home",
@@ -153,11 +153,10 @@ export const ui = {
     plannedPlatforms: "Planned platforms",
     visitPlatform: "Watch on",
     aboutEyebrow: "02 / About",
-    aboutTitleOne: "Technology, data,",
-    aboutTitleTwo: "and work made real.",
+    aboutTitle: "Having fun with life",
     aboutIntro: "A concise view of Ruochen’s profile, education, tools, and interests.",
     currentNoteTitle: "Profile",
-    currentNote: "From quantitative study and software projects to brand campaigns and emergency-service volunteering, Ruochen brings analytical thinking into practical, collaborative environments.",
+    currentNote: `"By all means marry: if you get a good wife, you'll become happy; if you get a bad one, you'll become a philosopher." - Socrates`,
     valuesTitle: "Working principles",
     values: ["Think analytically", "Build for real use", "Stay calm and collaborative"],
     educationTitle: "Education",
@@ -177,7 +176,7 @@ export const ui = {
     copyright: "Personal site",
   },
   zh: {
-    archiveTitle: "个人档案",
+    archiveTitle: "张若宸",
     languageName: "English",
     navigationLabel: "主要导航",
     home: "首页",
@@ -200,11 +199,10 @@ export const ui = {
     plannedPlatforms: "计划展示平台",
     visitPlatform: "前往观看",
     aboutEyebrow: "02 / 关于",
-    aboutTitleOne: "技术、数据，",
-    aboutTitleTwo: "以及落地的行动。",
+    aboutTitle: "having fun with life",
     aboutIntro: "简要了解张若宸的个人简介、教育背景、技能与兴趣。",
     currentNoteTitle: "个人简介",
-    currentNote: "从量化学习与软件项目，到品牌营销和应急服务志愿经历，张若宸习惯把分析思维带入真实、协作的工作环境。",
+    currentNote: "无论如何都要结婚。娶到好老婆，我会幸福；娶到坏老婆，我会成为哲学家。",
     valuesTitle: "做事方式",
     values: ["以分析理解问题", "为真实使用而构建", "在协作中保持沉着"],
     educationTitle: "教育背景",
